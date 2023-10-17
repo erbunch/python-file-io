@@ -6,6 +6,9 @@ this file takes an input of a text file and searches for all of the iterations
 of 'herit' with any prefixes and/or suffixes added to the word
 it will return the words in a file with each iteration and the line number it
 was found on
+sys.argv[0] = python function
+sys.argv[1] = text file
+sys.argv[2] = file to print the list of words to
 '''
 
 def search_criteria(word):
