@@ -9,6 +9,7 @@ was found on
 sys.argv[0] = python function
 sys.argv[1] = text file
 sys.argv[2] = file to print the list of words to
+sys.argv[3] = word you would like to search for iterations of
 '''
 
 def search_criteria(word):
@@ -22,7 +23,7 @@ def search_criteria(word):
 if __name__ == '__main__':
     with open(sys.argv[1], 'r') as origin_in:
         with open(sys.argv[2], 'w') as origin_out:
-            pattern = search_criteria('herit')
+            pattern = search_criteria(sys.argv[3])
             for line_number, line in enumerate(origin_in, start=1):
                 matches = re.finditer(pattern, line, flags=re.IGNORECASE)
                 for match in matches:
